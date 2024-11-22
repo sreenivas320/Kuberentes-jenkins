@@ -30,8 +30,8 @@ connection {
 
   tags = {
     Name = "kubeadm_master"
-    Owner = "Mubeen"
-    customer = "Mobin"
+    Owner = "sreenivas"
+    customer = "naik"
   }
   
 }
@@ -47,11 +47,7 @@ resource "aws_instance" "kubeadm_node1" {
   key_name = "key001"
   user_data = file("common.sh")
 
-  #tags = {
-   # Name = "kubeadm_node1"
-    #Owner = "Latheef"
-    #customer = "Latheef"
-  #}
+  
 tags = {
     "Name"  = "Node${count.index + 1}"
     "Value" = "Value${count.index + 1}"
@@ -72,11 +68,7 @@ tags = {
   #key_name = "kubeadm-key"
   #user_data = file("docker-swarm.sh")
 
-  #tags = {
-   # Name = "kubeadm_node2"
-    #Owner = "Latheef"
-    #customer = "Latheef"
-  #}
+  
   
 #}
 
